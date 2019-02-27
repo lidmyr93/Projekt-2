@@ -1,0 +1,116 @@
+/* Generella regler */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Mobile */
+
+header{
+    background: url(../img/header.jpg);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    color: yellow;
+    align-self: flex-end;
+}
+.hamburger{
+    color: yellow;
+    font-size: 2.5em;
+    background-color: #6659597c;
+    width: 58px;
+    max-height: 52px;
+    text-align: center;
+    justify-self: flex-end;
+    z-index:2;
+}
+nav {
+    display: none;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  .show-nav {
+    display: flex;
+    transition: 1s ease-in-out;
+    background: rgba(0, 0, 0, 0.76);
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: yellow;
+    font-size: 2em;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+}
+.show-nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    text-align: center;
+  }
+nav ul li h2{
+    color: yellow;
+    border-bottom: 2px solid yellow;
+}
+  
+/* Header ends */
+
+/* Main  */
+main{
+    /* height: 60vh; */
+}
+/* rating */
+.stars-outer{
+    position: relative;
+    display: inline-block;
+}
+.stars-inner{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+.stars-outer::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ccc;
+}
+.stars-inner::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #f8ce0b;
+}
+/* rating ends */
+/* Main ends */
+
+/* footer */
+footer{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+footer a{
+    font-size: 1.5em;
+    color: yellow;
+    text-decoration: none;
+}
+/* footer ends */

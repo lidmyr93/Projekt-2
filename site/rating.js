@@ -33,6 +33,7 @@ ratingControl.addEventListener('blur', (e) =>{
     }
     ratings[film] = rating;
     getRatings();
+    console.log(ratings); // här kanske spara objectet rating till localstorage.
 });
 
 // Hämtar ratings
@@ -41,8 +42,8 @@ function getRatings(){
         // ratings till procent
         const starPercentage = (ratings[rating] / starsTotal) * 100;
         //Avrundar
-       const starPercentageRounded = `${Math.round(starPercentage/10) * 10}%`;
-       
+        const starPercentageRounded = `${Math.round(starPercentage/10) * 10}%`;
+        
         // Sätter width of stars-inner till procent
         document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
         // Number rating

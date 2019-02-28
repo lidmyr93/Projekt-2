@@ -20,6 +20,7 @@ header{
 header h1{
     color: yellow;
     align-self: flex-end;
+    margin: 0;
 }
 .hamburger{
     color: yellow;
@@ -42,7 +43,7 @@ nav {
   .show-nav {
     display: flex;
     transition: 1s ease-in-out;
-    background: rgba(0, 0, 0, 0.76);
+    background: rgba(0, 0, 0, 0.877);
     justify-content: center;
     align-items: center;
 }
@@ -70,8 +71,44 @@ nav ul li h2{
 /* Header ends */
 
 /* Main  */
-main{
-    /* height: 60vh; */
+.news{
+    text-align: center;
+    margin: 0.2em 0;
+    padding: 0;
+    font-size: 3em;
+    text-shadow: 0px 0px 5px yellow, 0px 0px 5px black;
+}
+.offers{
+    background: url(../img/header.jpg);
+    color: green;
+    height: 300px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.map{
+    display: block;
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+}
+address{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+address > p{
+    flex: 1 0 50%;
+}
+address :nth-child(even){
+    text-align: right;
 }
 /* rating */
 .stars-outer{
@@ -98,6 +135,15 @@ main{
     font-weight: 900;
     color: #f8ce0b;
 }
+tr :last-child{
+    text-align: center;
+}
+.w-33{
+    width: 33%;
+}
+.w-35{
+    width: 35%;
+}
 /* rating ends */
 /* Main ends */
 
@@ -105,12 +151,23 @@ main{
 footer{
     background: black;
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 0.5em;
 }
-footer a{
-    font-size: 1.5em;
+footer > *{
     color: yellow;
-    text-decoration: none;
+}
+footer h3{
+    border-bottom: 1px solid yellow;
+    margin: 0;
+    padding: 0;
+}
+footer div p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 /* footer ends */

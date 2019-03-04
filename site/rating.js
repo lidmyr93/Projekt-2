@@ -5,6 +5,8 @@ const ratings = {
     filmFour : 2.4,
     filmFive: 3.5,
     filmSix : 1.2,
+    filmSeven : 3.2,
+    filmEigth : 2.1,
 };
 
 const starsTotal = 5;

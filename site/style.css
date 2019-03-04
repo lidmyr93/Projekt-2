@@ -5,7 +5,9 @@
     padding: 0;
 }
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-image: url(../img/bg.jpg);
+    background-repeat: repeat; */
 }
 
 /* Mobile */
@@ -78,17 +80,46 @@ nav ul li h2{
     font-size: 3em;
     text-shadow: 0px 0px 5px yellow, 0px 0px 5px black;
 }
-.offers{
-    background: url(../img/header.jpg);
-    color: green;
-    height: 300px;
+.offer-1{
+   position: relative;
+   margin-bottom: 10px;
+}
+.offer-1 img{
     width: 90%;
+    height: auto;
+    display: block;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    margin-bottom: 10px;
+}
+.text-block{
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+.offer-2{
+    position: relative;
+}
+.offer-2 img{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+ }
+.table-prices{
+    margin: 5px auto;
+    width: 90%;
+}
+.table-prices th{
+    padding-bottom: 5px;
+    text-align: left;
+}
+.table-prices td{
+    text-align: left;
+    border-bottom: 1px dotted black;
+    border-collapse: collapse;
 }
 .map{
     display: block;
@@ -110,6 +141,33 @@ address > p{
 address :nth-child(even){
     text-align: right;
 }
+/* contact form */
+form{
+    width: 90%;
+    margin: 0 auto;
+    background: black;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+input[type=email]{
+    width: 100%;
+    margin-bottom: 5px;
+    /* border: 2px solid yellow; */
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 5%; */
+}
+textarea{
+    overflow: scroll;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid yellow; */
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* contact form ends */
 /* rating */
 .stars-outer{
     position: relative;
@@ -144,6 +202,10 @@ tr :last-child{
 .w-35{
     width: 35%;
 }
+.rating-img{
+    width: 75px;
+    height: 75px;
+}
 /* rating ends */
 /* Main ends */
 
@@ -171,3 +233,49 @@ footer div p{
     padding: 0;
 }
 /* footer ends */
+
+
+@media(min-width: 720px){
+
+header{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    padding: 0 20px;
+}
+header h1{
+    color: yellow;
+    align-self: flex-end;
+    margin: 0;
+}
+.hamburger{
+   display: none;
+}
+nav {
+    display: inline-block;
+    text-align: right;
+    margin: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    align-self: flex-end;
+  }
+nav a {
+    color: yellow;
+    border-bottom: none;
+    margin-left: 20px;
+}
+nav ul{
+    margin: 0;
+}
+.menu-item{
+    display: inline;
+}
+.show-nav ul{
+  display: none;
+  }
+.hidedesktop{
+ display: none;
+}
+}

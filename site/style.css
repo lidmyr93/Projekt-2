@@ -73,7 +73,7 @@ nav ul li h2{
 /* Header ends */
 
 /* Main  */
-.news{
+.news, .prices{
     text-align: center;
     margin: 0.2em 0;
     padding: 0;
@@ -136,7 +136,7 @@ address{
     margin: 0 auto;
 }
 address > p{
-    flex: 1 0 50%;
+    flex: 1 0 40%;
 }
 address :nth-child(even){
     text-align: right;
@@ -259,7 +259,7 @@ nav {
     width: auto;
     height: auto;
     z-index: 0;
-    align-self: flex-end;
+    align-self: flex-start;
   }
 nav a {
     color: yellow;
@@ -277,5 +277,33 @@ nav ul{
   }
 .hidedesktop{
  display: none;
+}
+.container{
+    
+    
+}
+/* nyheter */
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+main > *{
+    grid-column: auto / span 6;
+}
+main .two-col{
+    grid-column: auto / span 2;
+}
+main .three-col{
+    grid-column: auto / span 3;
+}
+main .four-col{
+    grid-column: auto / span 4;
+}
+
+.show-vote{
+    display: none;
+}
+.vote{
+    display: block;
 }
 }

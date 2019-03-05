@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nacka Film</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,26 +32,29 @@
     </header>
 
     <main>
-        <h2 class="news">Nya filmer</h2>
         
-        <div class="container">
-            <div class="form-group">
-                <select id="film-select" class="form-control custom-select">
-                    <option value="0" disabled selected>Välj film</option>
-                    <option value="filmOne">Film ett</option>
-                    <option value="filmTwo">Film två</option>
-                    <option value="filmThree">Film tre</option>
-                    <option value="filmFour">Film fyra</option>
-                    <option value="filmFive">Film fem</option>
-                    <option value="filmSix">Film sex</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
-            </div>
+        <div class="container left-desktop three-col">
+                <h2 class="news">Nya filmer</h2>
+                <div class="show-vote">
+                    <div class="form-group">
+                        <select id="film-select" class="form-control custom-select">
+                            <option value="0" disabled selected>Välj film</option>
+                            <option value="filmOne">Film ett</option>
+                            <option value="filmTwo">Film två</option>
+                            <option value="filmThree">Film tre</option>
+                            <option value="filmFour">Film fyra</option>
+                            <option value="filmFive">Film fem</option>
+                            <option value="filmSix">Film sex</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
+                    </div>
+                </div>
+                <button class="vote-button">Rösta</button>
 
-            <table class="table table-striped">
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th class="w-33">Bild</th>
@@ -131,6 +134,103 @@
                         </td>
                     </tr>
                     <tr class="filmEigth">
+                            <td><img class="rating-img" src="../img/rating-imgs/starwars.jpg" alt="star wars"></td>
+                        <td>Starwars Episode IX</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    
+             <!-- test second table -->
+             <div class="container right-desktop three-col">
+                 <h2 class="news">Gamla filmer</h2>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th class="w-33">Bild</th>
+                        <th class="w-33">Titel</th>
+                        <th class="w-33">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="filmett">
+                        <td><img class="rating-img" src="../img/rating-imgs/avengers.jpg" alt="Avengers"></td>
+                        <td>Avengers: Endgame</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmTva">
+                        <td><img class="rating-img" src="../img/rating-imgs/aladdin.jpg" alt="Aladdin"></td>
+                        <td>Aladdin</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmTre">
+                        <td><img class="rating-img" src="../img/rating-imgs/glass.jpg" alt="Glass"></td>
+                        <td>Glass</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmFyra">
+                            <td><img class="rating-img" src="../img/rating-imgs/hellboy.jpg" alt="Hellboy"></td>
+                        <td>Hellboy</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmFem">
+                            <td><img class="rating-img" src="../img/rating-imgs/x-men.jpg" alt="X-men"></td>
+                        <td>X-men Dark Phoenix </td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmSex">
+                            <td><img class="rating-img" src="../img/rating-imgs/it.jpg" alt="IT"></td>
+                        <td>IT Chapter two</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmSju">
+                            <td><img class="rating-img" src="../img/rating-imgs/cptmarvel.jpg" alt="cptmarvel"></td>
+                        <td>Captain Marvel</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmAtta">
                             <td><img class="rating-img" src="../img/rating-imgs/starwars.jpg" alt="star wars"></td>
                         <td>Starwars Episode IX</td>
                         <td>

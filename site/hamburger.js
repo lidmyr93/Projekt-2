@@ -15,10 +15,10 @@ function toggleMenu() {
 const voting = document.querySelector('.show-vote');
 const voteknapp = document.querySelector('.vote-button');
 
-voteknapp.addEventListener('click', toggleMenu);
+voteknapp.addEventListener('click', toggleVote);
 
 
-function toggleMenu() {
+function toggleVote() {
     voting.classList.toggle('vote');
     voteknapp.innerHTML = (voteknapp.innerHTML == 'Rösta') ? '&#10761;' : 'Rösta';
 }

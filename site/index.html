@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nacka Film</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-   <!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,14 +16,15 @@
         <div class="hamburger">&#9776;</div>
         <nav>
             <ul>
-                <i class="menu-item">
-                    <a href="index.html">Nyheter</a>
+                <li class="menu-item">
+                    <a class="hover-link" href="index.html">Nyheter</a>
+
                 </li>
                 <li class="menu-item">
-                    <a href="offers.html">Erbjudanden</a>
+                    <a class="hover-link" href="offers.html">Erbjudanden</a>
                 </li>
                 <li class="menu-item">
-                    <a href="contact.html">Kontakt</a>
+                    <a class="hover-link" href="contact.html">Kontakt</a>
                 </li>
                 <li class="hidedesktop"><h2>Nacka Film AB</h2></li>
             </ul>
@@ -35,24 +36,6 @@
         
         <div class="container left-desktop three-col">
                 <h2 class="news">Nya filmer</h2>
-                <div class="show-vote">
-                    <div class="form-group">
-                        <select id="film-select" class="form-control custom-select">
-                            <option value="0" disabled selected>Välj film</option>
-                            <option value="filmOne">Film ett</option>
-                            <option value="filmTwo">Film två</option>
-                            <option value="filmThree">Film tre</option>
-                            <option value="filmFour">Film fyra</option>
-                            <option value="filmFive">Film fem</option>
-                            <option value="filmSix">Film sex</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
-                    </div>
-                </div>
-                <button class="vote-button">Rösta</button>
 
             <table class="table table-dark table-striped">
                 <thead>
@@ -146,6 +129,26 @@
 
                 </tbody>
             </table>
+            <div class="show-vote">
+                <div class="form-group">
+                    <select id="film-select" class="form-control custom-select">
+                        <option value="0" disabled selected>Välj film</option>
+                        <option value="filmOne">Film ett</option>
+                        <option value="filmTwo">Film två</option>
+                        <option value="filmThree">Film tre</option>
+                        <option value="filmFour">Film fyra</option>
+                        <option value="filmFive">Film fem</option>
+                        <option value="filmSix">Film sex</option>
+                        <option value="filmSeven">Film sju</option>
+                        <option value="filmEigth">Film åtta</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
+                </div>
+            </div>
+            <button class="vote-button">Rösta</button>
         </div>
     
              <!-- test second table -->

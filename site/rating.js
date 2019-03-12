@@ -49,7 +49,7 @@ oldfilmSelect.addEventListener('change', (e) =>{
 });
 // rating kontroll
 
-ratingControl.addEventListener('click', (e) =>{
+ratingControl.addEventListener('input', (e) =>{
     const rating = e.target.value; /* Saves the value you clicked to rating */
    
     if(rating > 5){ 
@@ -62,7 +62,7 @@ ratingControl.addEventListener('click', (e) =>{
 });
 
 
-oldratingControl.addEventListener('click', (e) =>{
+oldratingControl.addEventListener('input', (e) =>{
     const rating = e.target.value;
     console.log(rating);
     if(rating > 5){

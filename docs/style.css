@@ -1,0 +1,469 @@
+/* Generella regler */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(white,lightgray,gray);
+}
+
+/* Mobile */
+/* Header */
+header{
+    background: url(../img/header.jpg);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    color: yellow;
+    align-self: flex-end;
+    margin: 0;
+}
+.hamburger{
+    color: yellow;
+    font-size: 2.5em;
+    background-color: #6659597c;
+    width: 58px;
+    max-height: 52px;
+    text-align: center;
+    justify-self: flex-end;
+    z-index:2;
+}
+nav {
+    display: none;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  .show-nav {
+    display: flex;
+    transition: 1s ease-in-out;
+    background: rgba(0, 0, 0, 0.877);
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: yellow;
+    font-size: 2em;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+}
+.show-nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    text-align: center;
+  }
+nav ul li h2{
+    color: yellow;
+    border-bottom: 2px solid yellow;
+}
+/* Header ends */
+
+/* Main  */
+
+.news, .prices{ /* styling of h2 on each page */
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+    font-size: 3em;
+    text-shadow: 0px 0px 5px yellow, 0px 0px 5px black;
+}
+/* news */
+/* rating */
+.stars-outer{
+    position: relative;
+    display: inline-block;
+}
+.stars-inner{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+.stars-outer::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.616);
+}
+.stars-inner::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #f8ce0b;
+}
+tr :last-child{
+    text-align: center;
+}
+.w-33{
+    width: 33%;
+}
+.w-35{
+    width: 35%;
+}
+.rating-img{
+    width: 75px;
+    height: 75px;
+}
+.show-vote-one, .show-vote-two{
+    display: none;
+}
+.vote{
+    display: block;
+}
+.vote-button{
+    width: 100%;
+}
+/* rating ends + news ends */
+
+/* offers */
+.offer-1{
+   position: relative;
+   margin-bottom: 10px;
+}
+.offer-1 img , .offer-2 img{
+    width: 90%;
+    height: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.text-block{
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+.offer-2{
+    position: relative;
+}
+.table-prices{
+    margin: 5px auto;
+    width: 90%;
+}
+.table-prices th{
+    padding-bottom: 5px;
+    text-align: left;
+}
+.table-prices td{
+    text-align: left;
+    border-bottom: 1px dotted black;
+    border-collapse: collapse;
+}
+/* offers ends */
+
+/* contact */
+.map{
+    display: block;
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+}
+address{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+}
+address > p{
+    flex: 1 0 40%;
+}
+address :nth-child(even){
+    text-align: right;
+}
+/* contact form */
+form{
+    width: 95%;
+    margin: 0 auto;
+    background: #c9c9c9be;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 2px solid #919191be;
+}
+input[type=email]{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    /* border-radius: 15px 50px 30px 5px; */
+    border-radius: 5px;
+    border: 2px solid #919191be;
+}
+textarea{
+    overflow: scroll;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 2px solid #919191be;
+    
+}
+/* buttons for contact form + rating buttons */
+button[type=submit], .vote-button{ 
+    display: block;
+    width: 100%;
+    margin: 1px auto;
+    border-radius: 25px;
+    border: 2px solid black;
+    background: black;
+    color: yellow;
+    font-size: 1.2em;
+}
+button[type=submit]:hover , .vote-button:hover{
+    background:yellow;
+    color: black;
+    border-color: yellow;
+    font-weight: 700;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* contact form ends */
+
+
+/* Main ends */
+
+/* footer */
+footer{
+    background: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-top: 40px;
+}
+footer > *{
+    color: yellow;
+}
+footer h3{
+    border-bottom: 1px solid yellow;
+    margin: 0;
+    padding: 0;
+}
+footer div p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+/* footer ends */
+
+/* Desktop */
+@media(min-width: 720px){
+    /* Generella desktop */
+     .hidedesktop{
+        display: none;
+       }
+    /* Generella ends */
+
+    /* header desktop */
+header{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    padding: 0 20px;
+}
+header h1{
+    color: yellow;
+    align-self: flex-end;
+    margin: 0;
+}
+.hamburger{
+   display: none;
+}
+nav {
+    display: inline-block;
+    text-align: right;
+    margin: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    align-self: flex-start;
+  }
+  nav ul{
+      margin: 0;
+  }
+  nav ul li{
+      display: inline;
+  }
+  nav a:hover{ /* Overrule bootstraps hover */
+      color: yellow;
+      text-decoration: none;
+  }
+  /* Animation med border-bottom */
+  nav a{
+      color: yellow;
+      border-bottom: none;
+      margin-left: 20px;
+    }
+    nav a::after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: yellow;
+        transition: width .3s; /* Animation back right -> left */
+    }
+    nav a:hover::after{
+        width: 100%;
+        transition: width .3s; /* Animation left -> right */
+    }
+    /* Animation med border-bottom */
+.show-nav ul{
+  display: none;
+  }
+  /* Header desktop ends */
+
+
+
+/* Main desktop */
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+/* Autofill pages with grid system that spans 6, choose different class for lesser span */
+main > *{
+    grid-column: auto / span 6;
+}
+main .two-col{
+    grid-column: auto / span 2;
+}
+main .three-col{
+    grid-column: auto / span 3;
+}
+main .four-col{
+    grid-column: auto / span 4;
+}
+/* News desktop*/
+.vote-button{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+/* News desktop ends */
+
+/* Offers desktop */
+.offer-2 img, .offer-1 img{
+    width: 85%;
+    height: 400px;
+    padding: 5px;
+    border: solid 1px rgb(239, 239, 239);
+}
+
+.offer-2 img:hover, .offer-1 img:hover {
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+        box-shadow: 1px 1px 5px #999;
+}
+.text-block{
+    top: 20px;
+    left: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2.5em;
+}
+.table-prices{
+    margin: 0px auto;
+    width: 60%;
+}
+
+.table-prices th{
+    padding-top: 15px;
+    text-align: left;
+}
+.table-prices td{
+    text-align: left;
+    border-bottom: 1px dotted black;
+    border-collapse: collapse;
+    padding-top: 10px;
+}
+.table-prices td:nth-child(even),.table-prices th:nth-child(even){
+    text-align: right;
+}
+/* Offers desktop ends */
+
+/* Contact desktop */
+.map{
+    width: 80%;
+    height: 400px;
+}
+address{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    align-self: center;
+    line-height: 25px;
+}
+address :nth-child(odd){
+    text-align: center;
+}
+address :nth-child(even){
+    text-align: left;
+}
+/* Contact form desktop */
+form{
+    width: 60%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 30px;
+}
+input[type=email]{
+    width: 30%;
+    order: 2;
+    margin: 10px 0 0px 0;
+    padding-left: 5px;
+}
+
+textarea{
+    overflow: scroll;
+    resize: none;
+    order: 1;
+    height: 200px;
+    font-size: 1.5em;
+    padding: 5px;
+}
+    
+button[type=submit]{
+    width: 20%;
+    margin: 10px 0 0px 0;
+    order: 3;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* Contact form desktop ends */
+
+/* Contact desktop ends */
+
+/* Main desktop ends */
+} /* Desktop Ends */

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacka Film</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nacka Film</h1>
+
+        <div class="hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li class="menu-item">
+                    <a class="hover-link" href="index.html">Nyheter</a>
+
+                </li>
+                <li class="menu-item">
+                    <a class="hover-link" href="offers.html">Erbjudanden</a>
+                </li>
+                <li class="menu-item">
+                    <a class="hover-link" href="contact.html">Kontakt</a>
+                </li>
+                <li class="hidedesktop"><h2>Nacka Film AB</h2></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Nya filmer -->
+        <div class="container left-desktop three-col">
+                <h2 class="news">Nya filmer</h2>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="w-33">Bild</th>
+                        <th class="w-33">Titel</th>
+                        <th class="w-33">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="filmOne">
+                        <td><img class="rating-img" src="../img/rating-imgs/avengers.jpg" alt="Avengers"></td>
+                        <td>Avengers: Endgame</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmTwo">
+                        <td><img class="rating-img" src="../img/rating-imgs/aladdin.jpg" alt="Aladdin"></td>
+                        <td>Aladdin</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmThree">
+                        <td><img class="rating-img" src="../img/rating-imgs/glass.jpg" alt="Glass"></td>
+                        <td>Glass</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmFour">
+                            <td><img class="rating-img" src="../img/rating-imgs/hellboy.jpg" alt="Hellboy"></td>
+                        <td>Hellboy</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmFive">
+                            <td><img class="rating-img" src="../img/rating-imgs/x-men.jpg" alt="X-men"></td>
+                        <td>X-men Dark Phoenix </td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmSix">
+                            <td><img class="rating-img" src="../img/rating-imgs/it.jpg" alt="IT"></td>
+                        <td>IT Chapter two</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmSeven">
+                            <td><img class="rating-img" src="../img/rating-imgs/cptmarvel.jpg" alt="cptmarvel"></td>
+                        <td>Captain Marvel</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="filmEigth">
+                            <td><img class="rating-img" src="../img/rating-imgs/starwars.jpg" alt="star wars"></td>
+                        <td>Starwars Episode IX</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="show-vote-one">
+            <div class="form-group">
+                    <select id="film-select" class="form-control custom-select">
+                        <option value="0" disabled selected>Välj film</option>
+                        <option value="filmOne">Avengers: Endgame</option>
+                        <option value="filmTwo">Aladdin</option>
+                        <option value="filmThree">Glass</option>
+                        <option value="filmFour">Hellboy</option>
+                        <option value="filmFive">X-men Dark Phoenix</option>
+                        <option value="filmSix">IT Chapter two</option>
+                        <option value="filmSeven">Captain Marvel</option>
+                        <option value="filmEigth">Starwars Episode IX</option>
+                    </select>
+        </div>
+        <div class="form-group">
+            <input type="number" id="rating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
+        </div>
+    </div>
+        <button class="vote-button-one vote-button">Rösta på nya filmer</button>
+        </div>
+            
+    
+          <!-- Gamla filmer -->
+              <div class="container right-desktop three-col">
+                 <h2 class="news">Gamla filmer</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="w-33">Bild</th>
+                        <th class="w-33">Titel</th>
+                        <th class="w-33">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="oldFilmOne">
+                        <td><img class="rating-img" src="../img/rating-imgs/armageddon.jpg" alt="Avengers"></td>
+                        <td>Armageddon</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmTwo">
+                        <td><img class="rating-img" src="../img/rating-imgs/diehardone.jpg" alt="Aladdin"></td>
+                        <td>Die Hard</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmThree">
+                        <td><img class="rating-img" src="../img/rating-imgs/diehardtwo.jpg" alt="Glass"></td>
+                        <td>Die Hard 2</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmFour">
+                            <td><img class="rating-img" src="../img/rating-imgs/forrestgump.jpg" alt="Hellboy"></td>
+                        <td>Forrest Gump</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmFive">
+                            <td><img class="rating-img" src="../img/rating-imgs/meninblack.jpg" alt="X-men"></td>
+                        <td>Men In Black</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmSix">
+                            <td><img class="rating-img" src="../img/rating-imgs/shawshank.jpg" alt="IT"></td>
+                        <td>Shawshank Redemption</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmSeven">
+                            <td><img class="rating-img" src="../img/rating-imgs/silenceofthelambs.jpg" alt="cptmarvel"></td>
+                        <td>The Silence of The Lambs</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+                    <tr class="oldFilmEigth">
+                            <td><img class="rating-img" src="../img/rating-imgs/shining.jpg" alt="star wars"></td>
+                        <td>The Shining</td>
+                        <td>
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <span class="number-rating"></span>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table> 
+
+
+            <div class="show-vote-two">
+            <div class="form-group ">
+                    <select id="oldfilm-select" class="form-control custom-select">
+                        <option value="0" disabled selected>Välj film</option>
+                        <option value="oldFilmOne">Armageddon</option>
+                        <option value="oldFilmTwo">Die Hard</option>
+                        <option value="oldFilmThree">Die Hard 2</option>
+                        <option value="oldFilmFour">Forrest Gump</option>
+                        <option value="oldFilmFive">Men In Black</option>
+                        <option value="oldFilmSix">Shawshank Redemption</option>
+                        <option value="oldFilmSeven">The Silence of The Lambs</option>
+                        <option value="oldFilmEigth">The Shining</option>
+            </select>
+        </div>
+            <div class="form-group">
+                    <input type="number" id="oldrating-control" class="form-control" step="0.1" max="5" placeholder="Rate 1-5" disabled>
+                </div>
+            </div>
+                <button class="vote-button-two vote-button">Rösta på gamla filmer</button>
+    </div>
+    
+            
+            
+    </main>
+    <footer>
+            <h3>Nacka Film AB</h3>
+            <div>
+                <p>Nackavägen 14 |</p>
+                <p>070 - XXX XX XX</p>
+            </div>
+    </footer>
+    
+<script src="hamburger.js"></script>
+<script src="rating.js"></script>
+<script src="votetoggle.js"></script>
+</body>
+</html>

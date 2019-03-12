@@ -13,7 +13,7 @@ body{
 }
 
 /* Mobile */
-
+/* Header */
 header{
     background: url(../img/header.jpg);
     width: 100%;
@@ -43,7 +43,6 @@ nav {
     width: 100%;
     height: 100vh;
     z-index: 1;
-    /* justify-content: space-around; */
   }
   .show-nav {
     display: flex;
@@ -72,17 +71,68 @@ nav ul li h2{
     color: yellow;
     border-bottom: 2px solid yellow;
 }
-  
 /* Header ends */
 
 /* Main  */
-.news, .prices{
+
+.news, .prices{ /* styling of h2 on each page */
     text-align: center;
     margin: 10px 0;
     padding: 0;
     font-size: 3em;
     text-shadow: 0px 0px 5px yellow, 0px 0px 5px black;
 }
+/* news */
+/* rating */
+.stars-outer{
+    position: relative;
+    display: inline-block;
+}
+.stars-inner{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+.stars-outer::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.616);
+}
+.stars-inner::before{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #f8ce0b;
+}
+tr :last-child{
+    text-align: center;
+}
+.w-33{
+    width: 33%;
+}
+.w-35{
+    width: 35%;
+}
+.rating-img{
+    width: 75px;
+    height: 75px;
+}
+.show-vote-one, .show-vote-two{
+    display: none;
+}
+.vote{
+    display: block;
+}
+.vote-button{
+    width: 100%;
+}
+/* rating ends + news ends */
+
+/* offers */
 .offer-1{
    position: relative;
    margin-bottom: 10px;
@@ -119,6 +169,9 @@ nav ul li h2{
     border-bottom: 1px dotted black;
     border-collapse: collapse;
 }
+/* offers ends */
+
+/* contact */
 .map{
     display: block;
     width: 90%;
@@ -166,7 +219,8 @@ textarea{
     border: 2px solid #919191be;
     
 }
-button[type=submit]{
+/* buttons for contact form + rating buttons */
+button[type=submit], .vote-button{ 
     display: block;
     width: 100%;
     margin: 1px auto;
@@ -176,7 +230,7 @@ button[type=submit]{
     color: yellow;
     font-size: 1.2em;
 }
-button[type=submit]:hover{
+button[type=submit]:hover , .vote-button:hover{
     background:yellow;
     color: black;
     border-color: yellow;
@@ -187,54 +241,8 @@ button[type=submit]:hover{
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 /* contact form ends */
-/* rating */
-.stars-outer{
-    position: relative;
-    display: inline-block;
-}
-.stars-inner{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-}
-.stars-outer::before{
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: #ccc;
-}
-.stars-inner::before{
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: #f8ce0b;
-}
-tr :last-child{
-    text-align: center;
-}
-.w-33{
-    width: 33%;
-}
-.w-35{
-    width: 35%;
-}
-.rating-img{
-    width: 75px;
-    height: 75px;
-}
-.show-vote{
-    display: none;
-}
-.vote{
-    display: block;
-}
-.vote-button{
-    width: 100%;
-}
-/* rating ends */
+
+
 /* Main ends */
 
 /* footer */
@@ -246,7 +254,7 @@ footer{
     justify-content: center;
     font-size: 1em;
     padding: 0.5em;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 footer > *{
     color: yellow;
@@ -263,8 +271,15 @@ footer div p{
 }
 /* footer ends */
 
-
+/* Desktop */
 @media(min-width: 720px){
+    /* Generella desktop */
+     .hidedesktop{
+        display: none;
+       }
+    /* Generella ends */
+
+    /* header desktop */
 header{
     display: grid;
     grid-template-rows: 100%;
@@ -295,7 +310,7 @@ nav {
   nav ul li{
       display: inline;
   }
-  nav a:hover{ /* Överskrida bootstraps hover */
+  nav a:hover{ /* Overrule bootstraps hover */
       color: yellow;
       text-decoration: none;
   }
@@ -321,16 +336,16 @@ nav {
 .show-nav ul{
   display: none;
   }
+  /* Header desktop ends */
 
 
-.hidedesktop{
- display: none;
-}
-/* nyheter */
+
+/* Main desktop */
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+/* Autofill pages with grid system that spans 6, choose different class for lesser span */
 main > *{
     grid-column: auto / span 6;
 }
@@ -343,16 +358,15 @@ main .three-col{
 main .four-col{
     grid-column: auto / span 4;
 }
-
-.show-vote{
-    display: none;
-}
-.vote{
+/* News desktop*/
+.vote-button{
     display: block;
+    width: 50%;
+    margin: 0 auto;
 }
+/* News desktop ends */
 
-
-/* erbjudanden */
+/* Offers desktop */
 .offer-2 img, .offer-1 img{
     width: 85%;
     height: 400px;
@@ -373,9 +387,27 @@ main .four-col{
     padding-right: 20px;
     font-size: 2.5em;
 }
-/* erbjudanden ends */
+.table-prices{
+    margin: 0px auto;
+    width: 60%;
+}
 
-/* kontakt */
+.table-prices th{
+    padding-top: 15px;
+    text-align: left;
+}
+.table-prices td{
+    text-align: left;
+    border-bottom: 1px dotted black;
+    border-collapse: collapse;
+    padding-top: 10px;
+}
+.table-prices td:nth-child(even),.table-prices th:nth-child(even){
+    text-align: right;
+}
+/* Offers desktop ends */
+
+/* Contact desktop */
 .map{
     width: 80%;
     height: 400px;
@@ -395,24 +427,31 @@ address :nth-child(odd){
 address :nth-child(even){
     text-align: left;
 }
-/* contact form */
+/* Contact form desktop */
 form{
     width: 60%;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
     padding: 10px;
+    margin-top: 30px;
 }
 input[type=email]{
     width: 30%;
     order: 2;
     margin: 10px 0 0px 0;
+    padding-left: 5px;
 }
+
 textarea{
     overflow: scroll;
     resize: none;
     order: 1;
+    height: 200px;
+    font-size: 1.5em;
+    padding: 5px;
 }
+    
 button[type=submit]{
     width: 20%;
     margin: 10px 0 0px 0;
@@ -422,7 +461,9 @@ button[type=submit]{
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
-/* contact form ends */
+/* Contact form desktop ends */
 
-/* kontakt ends */
-}
+/* Contact desktop ends */
+
+/* Main desktop ends */
+} /* Desktop Ends */

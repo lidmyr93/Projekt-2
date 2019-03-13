@@ -256,6 +256,14 @@ button[type=submit]:hover , .vote-button:hover{
     border-color: yellow;
     font-weight: 700;
 }
+.formmsg{
+    display: none;
+    width: 80%;
+    margin: 10px auto;
+    color: green;
+    text-align: center;
+    order: 3;
+}
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
@@ -464,8 +472,9 @@ button[type=submit]{
 }
 .formmsg{
     display: none;
+    margin: 0;
+    width: auto;
     margin-top: 15px;
-    color: green;
     order: 3;
 }
 ::-webkit-scrollbar {

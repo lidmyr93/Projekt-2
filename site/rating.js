@@ -1,21 +1,21 @@
 /* Prefix rating when page is loaded */
 const ratings = {
-    filmOne : 4.2,
-    filmTwo : 3.1,
-    filmThree : 4.8,
-    filmFour : 2.4,
-    filmFive: 3.5,
-    filmSix : 1.2,
-    filmSeven : 3.2,
-    filmEigth : 2.1,
-    oldFilmOne : 4.4,
-    oldFilmTwo : 4.1,
-    oldFilmThree : 3.5,
-    oldFilmFour : 2.5,
-    oldFilmFive : 2.0,
-    oldFilmSix: 1.2,
-    oldFilmSeven : 4.3,
-    oldFilmEigth : 4.9,
+    filmOne : 0,
+    filmTwo : 0,
+    filmThree : 0,
+    filmFour : 0,
+    filmFive: 0,
+    filmSix : 0,
+    filmSeven : 0,
+    filmEigth : 0,
+    oldFilmOne : 0,
+    oldFilmTwo : 0,
+    oldFilmThree : 0,
+    oldFilmFour : 0,
+    oldFilmFive : 0,
+    oldFilmSix: 0,
+    oldFilmSeven : 0,
+    oldFilmEigth : 0,
 };
 
 
@@ -49,7 +49,7 @@ oldfilmSelect.addEventListener('change', (e) =>{
 });
 // rating kontroll
 
-ratingControl.addEventListener('click', (e) =>{
+ratingControl.addEventListener('input', (e) =>{
     const rating = e.target.value; /* Saves the value you clicked to rating */
    
     if(rating > 5){ 
@@ -62,7 +62,7 @@ ratingControl.addEventListener('click', (e) =>{
 });
 
 
-oldratingControl.addEventListener('click', (e) =>{
+oldratingControl.addEventListener('input', (e) =>{
     const rating = e.target.value;
     console.log(rating);
     if(rating > 5){

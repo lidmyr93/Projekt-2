@@ -24,7 +24,6 @@
                 <li class="menu-item">
                     <a href="contact.html">Kontakt</a>
                 </li>
-                <li class="hidedesktop"><h2>Nacka Film AB</h2></li>
             </ul>
         </nav>
 
@@ -37,14 +36,15 @@
             <p>Nackavägen 14</p>
             <p>070 - XXX XX XX</p>
 
-            <p >Öppettider :</p>
-            <p>Mån-Fre 15-22<br>Lör-sön 15-20</p>
+            <p class="m-top">Öppettider :</p>
+            <p class="m-top">Mån-Fre 15-22<br>Lör-sön 15-20</p>
         </address>
 
-        <form method="POST" action="https://formspree.io/nackafilmtest@gmail.com">
-            <input type="email" name="email" placeholder="Your email">
-            <textarea name="message" placeholder="Meddelande..."></textarea>
-            <button type="submit">Skicka</button>
+        <form id="emailform" method="post" action="https://formspree.io/nackafilmtest@gmail.com" >
+            <input id="email" type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Meddelande..." required></textarea>
+            <button id="send" type="submit" disabled>Skicka</button>
+            <span id="msg" class="formmsg">Tack för ditt meddelande</span>
           </form>
     </main>
     <footer>
@@ -56,5 +56,6 @@
     </footer>
     
 <script src="hamburger.js"></script>
+<script src="send.js"></script>
 </body>
 </html>
